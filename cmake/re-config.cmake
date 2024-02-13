@@ -13,10 +13,29 @@ find_package(ZLIB)
 if (USE_MBEDTLS)
 find_package(MBEDTLS)
 else()
-find_package(OpenSSL "1.1.1")
+# find_package(OpenSSL "1.1.1")
+# option(BUILD_OPENSSL "Build openssl" ON)
+# option(SYSTEM_OPENSSL "Try use system's openssl" OFF)
+CPMAddPackage(
+    NAME openssl
+    URL https://github.com/jimmy-park/openssl-cmake/archive/main.tar.gz
+    OPTIONS
+    "OPENSSL_CONFIGURE_OPTIONS no-shared\\\\;no-tests"
+)
+# message(DEBUG "Is build openssl? ${BUILD_OPENSSL}")
+#   IF(${BUILD_OPENSSL})
+#     message(DEBUG "Building openssl...")
+#     CPMAddPackage(NAME openssl GIT_TAG v3 GIT_REPOSITORY https://github.com/jimmy-park/openssl-cmake OPTIONS BUILD_OPENSSL ${BUILD_OPENSSL} OPENSSL_BUILD_VERSION openssl-3.1.5)
+#   else()
+#     CPMAddPackage(NAME openssl GIT_TAG v3 GIT_REPOSITORY https://github.com/jimmy-park/openssl-cmake OPTIONS SYSTEM_OPENSSL ${SYSTEM_OPENSSL} )
+#   endif()
 endif()
 
-option(USE_OPENSSL "Enable OpenSSL" ${OPENSSL_FOUND})
+if(${USE_MBEDTLS})
+  option(USE_OPENSSL "Enable OpenSSL" OFF)
+else()
+  option(USE_OPENSSL "Enable OpenSSL" ON)
+endif()
 option(USE_UNIXSOCK "Enable Unix Domain Sockets" ON)
 option(USE_TRACE "Enable Tracing helpers" OFF)
 

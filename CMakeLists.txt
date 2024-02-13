@@ -38,6 +38,9 @@ endif()
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
+include(${CMAKE_CURRENT_LIST_DIR}/cmake_not_module_path/getCPM.cmake)
+CPMAddPackage("gh:TheLartians/PackageProject.cmake@1.11.2")
+
 ##############################################################################
 #
 # Module/Package Includes
@@ -608,60 +611,80 @@ if(USE_REM)
 endif()
 
 
-##############################################################################
+# ##############################################################################
+# #
+# # Main target object
+# #
+
+add_library(${PROJECT_NAME} ${SRCS} ${HEADERS})
+target_include_directories(
+  ${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+                         $<INSTALL_INTERFACE:include/${PROJECT_NAME}-${PROJECT_VERSION}>
+)
+
+# being a cross-platform target, we enforce standards conformance on MSVC
+target_compile_options(${PROJECT_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:C,MSVC>:/permissive->")
+
 #
-# Main target object
+# add_library(re-objs OBJECT ${SRCS} ${HEADERS})
+#
+# set_target_properties(re-objs PROPERTIES POSITION_INDEPENDENT_CODE ON)
+#
+# target_compile_definitions(re-objs PRIVATE ${RE_DEFINITIONS})
+#
+# target_include_directories(re-objs PRIVATE include)
+# target_include_directories(re-objs PRIVATE
+#   ${OPENSSL_INCLUDE_DIR} ${ZLIB_INCLUDE_DIRS})
+#
+#
+# ##############################################################################
+# #
+# # Shared target libre.[so|dll|dylib]
+# #
+#
+# if(LIBRE_BUILD_SHARED)
+#   list(APPEND RE_INSTALL_TARGETS re-shared)
+#   add_library(re-shared SHARED $<TARGET_OBJECTS:re-objs>)
+#   target_link_libraries(re-shared PRIVATE ${RE_LIBS})
+#   set_target_properties(re-shared PROPERTIES VERSION
+#     ${PROJECT_SOVERSION}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
+#   set_target_properties(re-shared PROPERTIES SOVERSION ${PROJECT_SOVERSION})
+#   set_target_properties(re-shared PROPERTIES OUTPUT_NAME "re")
+#   add_library(libre::re-shared ALIAS re-shared)
+# endif()
+#
+#
+# ##############################################################################
+# #
+# # Static target libre.a
+# #
+#
+# if(LIBRE_BUILD_STATIC)
+#   list(APPEND RE_INSTALL_TARGETS re)
+#   add_library(re STATIC $<TARGET_OBJECTS:re-objs>)
+#   target_link_libraries(re PUBLIC ${RE_LIBS})
+#   target_include_directories(re PUBLIC
+#     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#   )
+#   add_library(libre::re ALIAS re)
+#
+#   if(MSVC)
+#     set_target_properties(re PROPERTIES OUTPUT_NAME "re-static")
+#     if(NOT LIBRE_BUILD_SHARED)
+#       set(PC_LIBNAME "re-static")
+#     endif()
+#   endif()
+# endif()
 #
 
-add_library(re-objs OBJECT ${SRCS} ${HEADERS})
+target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::SSL
+    OpenSSL::Crypto
+    OpenSSL::applink)
 
-set_target_properties(re-objs PROPERTIES POSITION_INDEPENDENT_CODE ON)
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+    "USE_OPENSSL=${USE_OPENSSL}")
 
-target_compile_definitions(re-objs PRIVATE ${RE_DEFINITIONS})
-
-target_include_directories(re-objs PRIVATE include)
-target_include_directories(re-objs PRIVATE
-  ${OPENSSL_INCLUDE_DIR} ${ZLIB_INCLUDE_DIRS})
-
-
-##############################################################################
-#
-# Shared target libre.[so|dll|dylib]
-#
-
-if(LIBRE_BUILD_SHARED)
-  list(APPEND RE_INSTALL_TARGETS re-shared)
-  add_library(re-shared SHARED $<TARGET_OBJECTS:re-objs>)
-  target_link_libraries(re-shared PRIVATE ${RE_LIBS})
-  set_target_properties(re-shared PROPERTIES VERSION
-    ${PROJECT_SOVERSION}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
-  set_target_properties(re-shared PROPERTIES SOVERSION ${PROJECT_SOVERSION})
-  set_target_properties(re-shared PROPERTIES OUTPUT_NAME "re")
-  add_library(libre::re-shared ALIAS re-shared)
-endif()
-
-
-##############################################################################
-#
-# Static target libre.a
-#
-
-if(LIBRE_BUILD_STATIC)
-  list(APPEND RE_INSTALL_TARGETS re)
-  add_library(re STATIC $<TARGET_OBJECTS:re-objs>)
-  target_link_libraries(re PUBLIC ${RE_LIBS})
-  target_include_directories(re PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  )
-  add_library(libre::re ALIAS re)
-
-  if(MSVC)
-    set_target_properties(re PROPERTIES OUTPUT_NAME "re-static")
-    if(NOT LIBRE_BUILD_SHARED)
-      set(PC_LIBNAME "re-static")
-    endif()
-  endif()
-endif()
+target_compile_definitions(${PROJECT_NAME} PRIVATE ${RE_DEFINITIONS})
 
 ##############################################################################
 #
@@ -703,17 +726,29 @@ configure_file(packaging/libre.pc.in libre.pc @ONLY)
 #
 
 
-install(TARGETS ${RE_INSTALL_TARGETS}
-  EXPORT libre
-  LIBRARY
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    COMPONENT Libraries
-    NAMELINK_SKIP
-  ARCHIVE
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    COMPONENT Development
-  INCLUDES
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/re
+# install(TARGETS ${RE_INSTALL_TARGETS}
+#   EXPORT libre
+#   LIBRARY
+#     DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#     COMPONENT Libraries
+#     NAMELINK_SKIP
+#   ARCHIVE
+#     DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#     COMPONENT Development
+#   INCLUDES
+#     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/re
+# )
+
+packageProject(
+  NAME ${PROJECT_NAME}
+  VERSION ${PROJECT_VERSION}
+  NAMESPACE ${PROJECT_NAME}
+  BINARY_DIR ${PROJECT_BINARY_DIR}
+  INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include
+  INCLUDE_DESTINATION include/${PROJECT_NAME}-${PROJECT_VERSION}
+  VERSION_HEADER "${VERSION_HEADER_LOCATION}"
+  COMPATIBILITY SameMajorVersion
+  DEPENDENCIES openssl
 )
 
 install(FILES ${HEADERS}
@@ -721,19 +756,19 @@ install(FILES ${HEADERS}
   COMPONENT Development
 )
 
-install(EXPORT libre
-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/libre
-  NAMESPACE libre::
-)
+# install(EXPORT libre
+#   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/libre
+#   NAMESPACE libre::
+# )
 
-if(LIBRE_BUILD_SHARED)
-  install(TARGETS re-shared
-    LIBRARY
-      DESTINATION ${CMAKE_INSTALL_LIBDIR}
-      NAMELINK_ONLY
-      COMPONENT Development
-  )
-endif()
+# if(LIBRE_BUILD_SHARED)
+#   install(TARGETS re-shared
+#     LIBRARY
+#       DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#       NAMELINK_ONLY
+#       COMPONENT Development
+#   )
+# endif()
 
 install(FILES cmake/re-config.cmake
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/re
