@@ -624,7 +624,7 @@ target_include_directories(
 
 # being a cross-platform target, we enforce standards conformance on MSVC
 target_compile_options(${PROJECT_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:C,MSVC>:/permissive->")
-
+set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 #
 # add_library(re-objs OBJECT ${SRCS} ${HEADERS})
 #
