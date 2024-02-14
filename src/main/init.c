@@ -13,14 +13,14 @@
 #endif
 #include <windows.h>
 #endif
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_list.h>
-#include <re_net.h>
-#include <re_sys.h>
-#include <re_main.h>
-#include <re_trace.h>
-#include <re_btrace.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_list.h>
+#include <re/re_net.h>
+#include <re/re_sys.h>
+#include <re/re_main.h>
+#include <re/re_trace.h>
+#include <re/re_btrace.h>
 #include "main.h"
 
 

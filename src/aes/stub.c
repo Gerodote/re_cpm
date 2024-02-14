@@ -3,8 +3,8 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_aes.h>
+#include <re/re_types.h>
+#include <re/re_aes.h>
 
 
 int aes_alloc(struct aes **stp, enum aes_mode mode,

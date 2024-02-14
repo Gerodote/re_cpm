@@ -4,8 +4,8 @@
  * Copyright (C) 2010 Creytiv.com
  */
 
-#include <re_types.h>
-#include <rem_g711.h>
+#include <re/re_types.h>
+#include <re/rem_g711.h>
 
 
 const uint8_t g711_l2u[4096] = {

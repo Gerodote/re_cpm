@@ -5,8 +5,8 @@
  */
 
 #include <math.h>
-#include <re.h>
-#include <rem_goertzel.h>
+#include <re/re.h>
+#include <re/rem_goertzel.h>
 
 
 #define PI 3.14159265358979323846264338327

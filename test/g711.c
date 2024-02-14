@@ -4,14 +4,14 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re.h>
-#include <rem_g711.h>
+#include <re/re.h>
+#include <re/rem_g711.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "test_g711"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /* G.711 reference tables - copied from re/src/g711/g711.c */

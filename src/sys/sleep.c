@@ -3,9 +3,9 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_sys.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_sys.h>
 #ifdef WIN32
 #include <windows.h>
 #endif

@@ -4,9 +4,9 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re.h>
-#include <rem_au.h>
-#include <rem_aufile.h>
+#include <re/re.h>
+#include <re/rem_au.h>
+#include <re/rem_aufile.h>
 #include "aufile.h"
 
 

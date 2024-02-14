@@ -5,9 +5,9 @@
  */
 
 #include <string.h>
-#include <re_types.h>
-#include <re_mbuf.h>
-#include <re_av1.h>
+#include <re/re_types.h>
+#include <re/re_mbuf.h>
+#include <re/re_av1.h>
 
 
 /**

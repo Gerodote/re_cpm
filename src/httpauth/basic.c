@@ -4,17 +4,17 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re_types.h>
-#include <re_mbuf.h>
-#include <re_base64.h>
-#include <re_mem.h>
-#include <re_fmt.h>
-#include <re_httpauth.h>
+#include <re/re_types.h>
+#include <re/re_mbuf.h>
+#include <re/re_base64.h>
+#include <re/re_mem.h>
+#include <re/re_fmt.h>
+#include <re/re_httpauth.h>
 
 
 #define DEBUG_MODULE "httpauth_basic"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static void httpauth_basic_destr(void *arg)

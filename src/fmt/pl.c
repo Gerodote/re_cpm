@@ -11,10 +11,10 @@
 #endif
 #include <string.h>
 #include <stdlib.h>
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_fmt.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_fmt.h>
 
 
 /** Pointer-length NULL initialiser */

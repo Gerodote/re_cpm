@@ -4,14 +4,14 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <dlfcn.h>
-#include <re_types.h>
-#include <re_fmt.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
 #include "mod_internal.h"
 
 
 #define DEBUG_MODULE "dl"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static const int dl_flag = RTLD_NOW | RTLD_LOCAL;

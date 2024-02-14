@@ -8,16 +8,16 @@
 #include <openssl/rand.h>
 #include <openssl/err.h>
 #endif
-#include <re_types.h>
-#include <re_mbuf.h>
-#include <re_list.h>
-#include <re_tmr.h>
-#include <re_sys.h>
+#include <re/re_types.h>
+#include <re/re_mbuf.h>
+#include <re/re_list.h>
+#include <re/re_tmr.h>
+#include <re/re_sys.h>
 
 
 #define DEBUG_MODULE "rand"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static const char alphanum[] =

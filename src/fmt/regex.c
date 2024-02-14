@@ -4,8 +4,8 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <ctype.h>
-#include <re_types.h>
-#include <re_fmt.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
 
 
 /** Defines a character range */

@@ -4,15 +4,15 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
 
 
 #define DEBUG_MODULE "mbuf"
 #define DEBUG_LEVEL 4
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 enum {DEFAULT_SIZE=512};

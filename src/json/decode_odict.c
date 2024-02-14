@@ -4,13 +4,13 @@
  * Copyright (C) 2010 - 2015 Creytiv.com
  */
 
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_list.h>
-#include <re_hash.h>
-#include <re_odict.h>
-#include <re_json.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_list.h>
+#include <re/re_hash.h>
+#include <re/re_odict.h>
+#include <re/re_json.h>
 
 
 static int container_add(const char *name, unsigned idx,

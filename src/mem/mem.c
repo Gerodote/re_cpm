@@ -6,19 +6,19 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-#include <re_types.h>
-#include <re_list.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_mem.h>
-#include <re_btrace.h>
-#include <re_thread.h>
-#include <re_atomic.h>
+#include <re/re_types.h>
+#include <re/re_list.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_mem.h>
+#include <re/re_btrace.h>
+#include <re/re_thread.h>
+#include <re/re_atomic.h>
 
 
 #define DEBUG_MODULE "mem"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 #ifndef RELEASE

@@ -10,13 +10,13 @@
 #include <unistd.h>
 #endif
 #include <string.h>
-#include <re.h>
-#include <rem_au.h>
-#include <rem_aulevel.h>
-#include <rem_auframe.h>
-#include <rem_aubuf.h>
-#include <rem_aufile.h>
-#include <rem_aumix.h>
+#include <re/re.h>
+#include <re/rem_au.h>
+#include <re/rem_aulevel.h>
+#include <re/rem_auframe.h>
+#include <re/rem_aubuf.h>
+#include <re/rem_aufile.h>
+#include <re/rem_aumix.h>
 
 
 /** Defines an Audio mixer */

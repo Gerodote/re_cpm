@@ -3,14 +3,14 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_list.h>
-#include <re_mem.h>
+#include <re/re_types.h>
+#include <re/re_list.h>
+#include <re/re_mem.h>
 
 
 #define DEBUG_MODULE "list"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /**

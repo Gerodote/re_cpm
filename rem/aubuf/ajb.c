@@ -122,11 +122,11 @@
  */
 
 #include <stdlib.h>
-#include <re.h>
-#include <rem_au.h>
-#include <rem_aulevel.h>
-#include <rem_auframe.h>
-#include <rem_aubuf.h>
+#include <re/re.h>
+#include <re/rem_au.h>
+#include <re/rem_aulevel.h>
+#include <re/rem_auframe.h>
+#include <re/rem_aubuf.h>
 #include "ajb.h"
 
 #define DEBUG_LEVEL 5

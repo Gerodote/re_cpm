@@ -5,10 +5,10 @@
  */
 #include <stdlib.h>
 #include <string.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_sys.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_sys.h>
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif

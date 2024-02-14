@@ -3,15 +3,15 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_uri.h>
-#include <re_list.h>
-#include <re_sa.h>
-#include <re_msg.h>
-#include <re_sip.h>
-#include <re_sipevent.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_uri.h>
+#include <re/re_list.h>
+#include <re/re_sa.h>
+#include <re/re_msg.h>
+#include <re/re_sip.h>
+#include <re/re_sipevent.h>
 
 
 int sipevent_event_decode(struct sipevent_event *se, const struct pl *pl)

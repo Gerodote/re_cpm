@@ -16,16 +16,16 @@
 #include <mbedtls/md5.h>
 #include <mbedtls/error.h>
 #endif
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_md5.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_md5.h>
 
 
 #define DEBUG_MODULE "md5"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 /**
  * Calculate the MD5 hash from a buffer

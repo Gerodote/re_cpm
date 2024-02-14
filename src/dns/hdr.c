@@ -3,12 +3,12 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_list.h>
-#include <re_mbuf.h>
-#include <re_net.h>
-#include <re_dns.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_list.h>
+#include <re/re_mbuf.h>
+#include <re/re_net.h>
+#include <re/re_dns.h>
 
 
 enum {

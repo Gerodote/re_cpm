@@ -3,10 +3,10 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_tcp.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_tcp.h>
 
 #ifndef RE_TCP_BACKLOG
 #define RE_TCP_BACKLOG 5

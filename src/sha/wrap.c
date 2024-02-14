@@ -5,8 +5,8 @@
  * Copyright (C) 2022 Sebastian Reimers <hallo@studio-link.de>
  */
 
-#include <re_types.h>
-#include <re_mbuf.h>
+#include <re/re_types.h>
+#include <re/re_mbuf.h>
 #ifdef USE_OPENSSL
 #include <openssl/sha.h>
 #elif defined (__APPLE__)
@@ -19,12 +19,12 @@
 #include <mbedtls/sha256.h>
 #include <mbedtls/error.h>
 #endif
-#include <re_sha.h>
+#include <re/re_sha.h>
 
 
 #define DEBUG_MODULE "sha"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 #if !defined (USE_OPENSSL) && defined (WIN32)
 static void compute_hash(ALG_ID alg_id, const void *data, size_t data_size,

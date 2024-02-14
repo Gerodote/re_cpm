@@ -3,14 +3,14 @@
  *
  * Copyright (C) 2022 commend.com - m.fridrich@commend.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_uri.h>
-#include <re_list.h>
-#include <re_sa.h>
-#include <re_msg.h>
-#include <re_sip.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_uri.h>
+#include <re/re_list.h>
+#include <re/re_sa.h>
+#include <re/re_msg.h>
+#include <re/re_sip.h>
 
 /**
  * Decode a pointer-length string into a SIP RAck header

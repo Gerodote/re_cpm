@@ -4,8 +4,8 @@
  * Copyright (C) 2022 Commend.com - c.spielberger@commend.com
  */
 
-#include <re.h>
-#include <rem_au.h>
+#include <re/re.h>
+#include <re/rem_au.h>
 
 
 /**

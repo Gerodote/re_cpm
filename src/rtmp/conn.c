@@ -4,21 +4,21 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_net.h>
-#include <re_sa.h>
-#include <re_list.h>
-#include <re_tcp.h>
-#include <re_srtp.h>
-#include <re_tls.h>
-#include <re_sys.h>
-#include <re_odict.h>
-#include <re_dns.h>
-#include <re_uri.h>
-#include <re_rtmp.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_net.h>
+#include <re/re_sa.h>
+#include <re/re_list.h>
+#include <re/re_tcp.h>
+#include <re/re_srtp.h>
+#include <re/re_tls.h>
+#include <re/re_sys.h>
+#include <re/re_odict.h>
+#include <re/re_dns.h>
+#include <re/re_uri.h>
+#include <re/re_rtmp.h>
 #include "rtmp.h"
 
 

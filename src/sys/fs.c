@@ -23,16 +23,16 @@
 #ifdef HAVE_IO_H
 #include <io.h>
 #endif
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_sys.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_sys.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
 
 
 #define DEBUG_MODULE "fs"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 #ifdef WIN32

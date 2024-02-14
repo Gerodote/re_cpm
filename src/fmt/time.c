@@ -14,8 +14,8 @@
 #include <windows.h>
 #endif
 
-#include <re_types.h>
-#include <re_fmt.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
 
 
 static const char *dayv[] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};

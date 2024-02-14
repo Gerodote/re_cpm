@@ -5,10 +5,10 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <rem_au.h>
-#include <rem_aulevel.h>
-#include <rem_auframe.h>
+#include <re/re.h>
+#include <re/rem_au.h>
+#include <re/rem_aulevel.h>
+#include <re/rem_auframe.h>
 
 
 /**

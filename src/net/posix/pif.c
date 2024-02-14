@@ -14,16 +14,16 @@
 #ifdef __sun
 #include <sys/sockio.h>
 #endif
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_sa.h>
-#include <re_net.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_sa.h>
+#include <re/re_net.h>
 
 
 #define DEBUG_MODULE "posixif"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /**

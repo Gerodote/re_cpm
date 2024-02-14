@@ -4,13 +4,13 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "testmd5"
 #define DEBUG_LEVEL 4
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 int test_md5(void)

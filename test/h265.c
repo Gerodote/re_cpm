@@ -5,15 +5,15 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <re_h265.h>
-#include <rem.h>
+#include <re/re.h>
+#include <re/re_h265.h>
+#include <re/rem.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "h265test"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 int test_h265(void)

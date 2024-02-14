@@ -3,10 +3,10 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_sa.h>
-#include <re_udp.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_sa.h>
+#include <re/re_udp.h>
 
 
 static int multicast_update(struct udp_sock *us, const struct sa *group,

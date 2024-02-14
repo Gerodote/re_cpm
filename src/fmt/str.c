@@ -9,9 +9,9 @@
 #ifdef HAVE_STRINGS_H
 #include <strings.h>
 #endif
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_fmt.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_fmt.h>
 
 enum {
 	X64_STRSIZE = 17,

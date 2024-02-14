@@ -4,13 +4,13 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <ctype.h>
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_list.h>
-#include <re_tmr.h>
-#include <re_net.h>
-#include <re_telev.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_list.h>
+#include <re/re_tmr.h>
+#include <re/re_net.h>
+#include <re/re_telev.h>
 
 
 /*

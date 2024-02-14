@@ -8,14 +8,14 @@
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#include <re_types.h>
-#include <re_sa.h>
-#include <re_net.h>
-#include <re_unixsock.h>
+#include <re/re_types.h>
+#include <re/re_sa.h>
+#include <re/re_net.h>
+#include <re/re_unixsock.h>
 
 #define DEBUG_MODULE "unixsock"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 #ifdef WIN32
 #define close closesocket

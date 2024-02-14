@@ -1,13 +1,13 @@
 /**
  * @file net.c Network Testcode
  */
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "test_net"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static bool ipv6_handler(const char *ifname, const struct sa *sa, void *arg)

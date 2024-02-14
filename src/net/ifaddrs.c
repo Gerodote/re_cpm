@@ -7,15 +7,15 @@
 #include <sys/socket.h>
 #include <net/if.h>
 #include <ifaddrs.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_sa.h>
-#include <re_net.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_sa.h>
+#include <re/re_net.h>
 
 
 #define DEBUG_MODULE "ifaddrs"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /**

@@ -4,14 +4,14 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re.h>
-#include <rem.h>
+#include <re/re.h>
+#include <re/rem.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "test/dtmf"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static void dtmf_dec_handler(char digit, void *arg)

@@ -1,8 +1,8 @@
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_trace.h>
-#include <re_mem.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_trace.h>
+#include <re/re_mem.h>
 
 
 int re_text2pcap(struct re_printf *pf, struct re_text2pcap *pcap)

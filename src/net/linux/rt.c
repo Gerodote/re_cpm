@@ -10,16 +10,16 @@
 #include <linux/types.h>
 #include <linux/netlink.h>
 #include <linux/rtnetlink.h>
-#include <re_types.h>
-#include <re_mbuf.h>
-#include <re_fmt.h>
-#include <re_sa.h>
-#include <re_net.h>
+#include <re/re_types.h>
+#include <re/re_mbuf.h>
+#include <re/re_fmt.h>
+#include <re/re_sa.h>
+#include <re/re_net.h>
 
 
 #define DEBUG_MODULE "linuxrt"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /* Override macros to avoid casting alignment warning */

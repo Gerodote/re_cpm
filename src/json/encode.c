@@ -3,11 +3,11 @@
  *
  * Copyright (C) 2010 - 2015 Creytiv.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_list.h>
-#include <re_odict.h>
-#include <re_json.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_list.h>
+#include <re/re_odict.h>
+#include <re/re_json.h>
 
 
 static int encode_entry(struct re_printf *pf, const struct odict_entry *e)

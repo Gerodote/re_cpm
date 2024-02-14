@@ -4,9 +4,9 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <math.h>
-#include <re.h>
-#include <rem_au.h>
-#include <rem_auconv.h>
+#include <re/re.h>
+#include <re/rem_au.h>
+#include <re/rem_auconv.h>
 
 
 static inline float ausamp_short2float(int16_t in)

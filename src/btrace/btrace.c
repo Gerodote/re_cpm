@@ -15,14 +15,14 @@
 #include <dbghelp.h>
 #endif
 #include <stdlib.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_btrace.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_btrace.h>
 
 #define DEBUG_MODULE "btrace"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 enum print_type { BTRACE_CSV, BTRACE_NEWLINE, BTRACE_JSON };
 

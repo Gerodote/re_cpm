@@ -12,11 +12,11 @@
 #ifdef HAVE_IO_H
 #include <io.h>
 #endif
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_conf.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_conf.h>
 
 
 #ifdef WIN32

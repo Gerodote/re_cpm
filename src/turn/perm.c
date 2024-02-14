@@ -3,17 +3,17 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_list.h>
-#include <re_hash.h>
-#include <re_tmr.h>
-#include <re_sa.h>
-#include <re_md5.h>
-#include <re_udp.h>
-#include <re_stun.h>
-#include <re_turn.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_list.h>
+#include <re/re_hash.h>
+#include <re/re_tmr.h>
+#include <re/re_sa.h>
+#include <re/re_md5.h>
+#include <re/re_udp.h>
+#include <re/re_stun.h>
+#include <re/re_turn.h>
 #include "turnc.h"
 
 

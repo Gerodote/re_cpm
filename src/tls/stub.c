@@ -4,11 +4,11 @@
 # Copyright (C) 2023 Christian Spielberger
  */
 #include <string.h>
-#include <re_types.h>
-#include <re_mbuf.h>
-#include <re_sa.h>
-#include <re_srtp.h>
-#include <re_tls.h>
+#include <re/re_types.h>
+#include <re/re_mbuf.h>
+#include <re/re_sa.h>
+#include <re/re_srtp.h>
+#include <re/re_tls.h>
 
 
 int tls_alloc(struct tls **tlsp, enum tls_method method, const char *keyfile,

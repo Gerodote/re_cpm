@@ -6,12 +6,12 @@
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_net.h>
-#include <re_main.h>
-#include <re_mqueue.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_net.h>
+#include <re/re_main.h>
+#include <re/re_mqueue.h>
 #include "mqueue.h"
 
 

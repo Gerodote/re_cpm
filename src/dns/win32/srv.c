@@ -6,18 +6,18 @@
 #include <winsock2.h>
 #include <iphlpapi.h>
 #include <io.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_list.h>
-#include <re_sa.h>
-#include <re_dns.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_list.h>
+#include <re/re_sa.h>
+#include <re/re_dns.h>
 #include "../dns.h"
 
 
 #define DEBUG_MODULE "win32/srv"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 int get_windns(char *domain, size_t dsize, struct sa *srvv, uint32_t *n)

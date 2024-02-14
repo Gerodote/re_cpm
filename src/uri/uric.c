@@ -4,14 +4,14 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <ctype.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_uri.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_uri.h>
 
 
 #define DEBUG_MODULE "uric"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /** Defines the URI escape handler */

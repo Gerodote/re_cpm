@@ -3,9 +3,9 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_base64.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_base64.h>
 
 
 static const char b64_table[65] =

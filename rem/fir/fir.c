@@ -5,8 +5,8 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <rem_fir.h>
+#include <re/re.h>
+#include <re/rem_fir.h>
 
 
 /**

@@ -11,10 +11,10 @@
 #endif
 #define __USE_UNIX98 1
 #include <string.h>
-#include <re.h>
-#include <rem_vid.h>
-#include <rem_vidconv.h>
-#include <rem_vidmix.h>
+#include <re/re.h>
+#include <re/rem_vid.h>
+#include <re/rem_vidconv.h>
+#include <re/rem_vidmix.h>
 
 /*
  * Clock-rate for video timestamp

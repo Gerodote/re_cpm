@@ -5,10 +5,10 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <rem_vid.h>
-#include <rem_dsp.h>
-#include <rem_vidconv.h>
+#include <re/re.h>
+#include <re/rem_vid.h>
+#include <re/rem_dsp.h>
+#include <re/rem_vidconv.h>
 
 
 #if 0

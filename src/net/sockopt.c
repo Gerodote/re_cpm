@@ -7,14 +7,14 @@
 #include <unistd.h>
 #endif
 #include <fcntl.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_net.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_net.h>
 
 
 #define DEBUG_MODULE "sockopt"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /** Platform independent buffer type cast */

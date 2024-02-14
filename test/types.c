@@ -2,7 +2,7 @@
  * @file types.c Types Testcode
  *
  */
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 int test_re_assert_se(void)

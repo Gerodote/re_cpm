@@ -5,12 +5,12 @@
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 #define DEBUG_MODULE "test_trace"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 static void test_loop(int count)
 {

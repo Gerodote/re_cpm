@@ -3,9 +3,9 @@
  *
  * Copyright (C) 2022 Sebastian Reimers
  */
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_thread.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_thread.h>
 
 
 struct thread {

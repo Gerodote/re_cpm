@@ -6,13 +6,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include <wchar.h>
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "testfmt"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 int test_fmt_pl(void)

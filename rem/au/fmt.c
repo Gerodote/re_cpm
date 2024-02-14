@@ -3,8 +3,8 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re.h>
-#include <rem_au.h>
+#include <re/re.h>
+#include <re/rem_au.h>
 
 
 /* Number of bytes per sample */

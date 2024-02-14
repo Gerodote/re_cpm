@@ -4,9 +4,9 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <math.h>
-#include <re.h>
-#include <rem_autone.h>
-#include <rem_dsp.h>
+#include <re/re.h>
+#include <re/rem_autone.h>
+#include <re/rem_dsp.h>
 
 
 #define SCALE (32767)

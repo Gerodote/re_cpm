@@ -4,13 +4,13 @@
  * Copyright (C) 2010 Creytiv.com
  */
 
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_sa.h>
-#include <re_net.h>
-#include <rem_avc.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_sa.h>
+#include <re/re_net.h>
+#include <re/rem_avc.h>
 
 
 #define AVC_CONFIG_VERSION 1

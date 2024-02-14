@@ -4,13 +4,13 @@
  * Copyright (C) 2010 - 2016 Alfred E. Heggestad
  */
 #include <string.h>
-#include <re.h>
+#include <re/re.h>
 #include "../test.h"
 
 
 #define DEBUG_MODULE "mock/dnssrv"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 #define LOCAL_PORT 0

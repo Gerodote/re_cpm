@@ -4,8 +4,8 @@
  * Copyright (C) 2018 Creytiv.com
  */
 
-#include <re_types.h>
-#include <rem_aac.h>
+#include <re/re_types.h>
+#include <re/rem_aac.h>
 
 
 /*

@@ -6,10 +6,10 @@
 
 #include <string.h>
 #include <CommonCrypto/CommonHMAC.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_hmac.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_hmac.h>
 
 
 enum { KEY_SIZE = 256 };

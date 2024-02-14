@@ -4,10 +4,10 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_sha.h>
-#include <re_hmac.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_sha.h>
+#include <re/re_hmac.h>
 
 
 struct hmac {

@@ -4,13 +4,13 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <windows.h>
-#include <re_types.h>
+#include <re/re_types.h>
 #include "../mod_internal.h"
 
 
 #define DEBUG_MODULE "dll"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /*

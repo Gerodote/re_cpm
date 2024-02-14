@@ -4,7 +4,7 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re_types.h>
+#include <re/re_types.h>
 #ifdef USE_OPENSSL
 #include <openssl/sha.h>
 #include <openssl/hmac.h>
@@ -18,12 +18,12 @@
 #include <mbedtls/md.h>
 #include <mbedtls/error.h>
 #endif
-#include <re_hmac.h>
+#include <re/re_hmac.h>
 
 
 #define DEBUG_MODULE "hmac"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 #if !defined (USE_OPENSSL) && defined (WIN32)

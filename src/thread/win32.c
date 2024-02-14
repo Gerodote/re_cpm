@@ -6,16 +6,16 @@
 
 #include <time.h>
 #include <process.h>
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_list.h>
-#include <re_tmr.h>
-#include <re_thread.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_list.h>
+#include <re/re_tmr.h>
+#include <re/re_thread.h>
 
 
 #define DEBUG_MODULE "thread"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 #define TSS_DESTRUCTOR_MAX 64
 

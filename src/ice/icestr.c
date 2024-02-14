@@ -3,14 +3,14 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_list.h>
-#include <re_tmr.h>
-#include <re_sa.h>
-#include <re_stun.h>
-#include <re_ice.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_list.h>
+#include <re/re_tmr.h>
+#include <re/re_sa.h>
+#include <re/re_stun.h>
+#include <re/re_ice.h>
 #include "ice.h"
 
 

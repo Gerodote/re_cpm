@@ -4,10 +4,10 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <ctype.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_list.h>
-#include <re_hash.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_list.h>
+#include <re/re_hash.h>
 
 
 #define FNV1_32A_INIT UINT32_C(0x811c9dc5)

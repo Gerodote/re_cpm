@@ -5,9 +5,9 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <rem_fir.h>
-#include <rem_auresamp.h>
+#include <re/re.h>
+#include <re/rem_fir.h>
+#include <re/rem_auresamp.h>
 
 
 /* 48kHz sample-rate, 4kHz cutoff (pass 0-3kHz, stop 5-24kHz) */

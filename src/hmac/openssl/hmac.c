@@ -8,9 +8,9 @@
 #include <openssl/hmac.h>
 #include <openssl/err.h>
 #include <string.h>
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_hmac.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_hmac.h>
 
 
 struct hmac {

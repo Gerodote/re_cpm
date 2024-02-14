@@ -4,19 +4,19 @@
  * Copyright (C) 2015 - 2022 Alfred E. Heggestad
  */
 
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_tcp.h>
-#include <re_net.h>
-#include <re_shim.h>
-#include <re_convert.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_tcp.h>
+#include <re/re_net.h>
+#include <re/re_shim.h>
+#include <re/re_convert.h>
 
 
 #define DEBUG_MODULE "shim"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 struct shim {

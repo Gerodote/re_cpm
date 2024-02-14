@@ -6,15 +6,15 @@
 
 #include <string.h>
 #include <time.h>
-#include <re_types.h>
-#include <re_sys.h>
-#include <re_md5.h>
-#include <re_sa.h>
-#include <re_list.h>
-#include <re_fmt.h>
-#include <re_msg.h>
-#include <re_httpauth.h>
-#include <re_http.h>
+#include <re/re_types.h>
+#include <re/re_sys.h>
+#include <re/re_md5.h>
+#include <re/re_sa.h>
+#include <re/re_list.h>
+#include <re/re_fmt.h>
+#include <re/re_msg.h>
+#include <re/re_httpauth.h>
+#include <re/re_http.h>
 
 
 enum {

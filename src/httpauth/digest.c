@@ -6,15 +6,15 @@
  */
 #include <string.h>
 #include <time.h>
-#include <re_atomic.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_mem.h>
-#include <re_md5.h>
-#include <re_sha.h>
-#include <re_sys.h>
-#include <re_httpauth.h>
+#include <re/re_atomic.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_mem.h>
+#include <re/re_md5.h>
+#include <re/re_sha.h>
+#include <re/re_sys.h>
+#include <re/re_httpauth.h>
 
 
 typedef void (digest_decode_h)(const struct pl *name, const struct pl *val,

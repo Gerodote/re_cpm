@@ -43,8 +43,8 @@
  *
  * CRC32 code derived from work by Gary S. Brown.
  */
-#include <re_types.h>
-#include <re_crc32.h>
+#include <re/re_types.h>
+#include <re/re_crc32.h>
 
 
 #ifdef USE_ZLIB

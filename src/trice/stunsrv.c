@@ -4,25 +4,25 @@
  * Copyright (C) 2010 Alfred E. Heggestad
  */
 #include <string.h>
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_list.h>
-#include <re_tmr.h>
-#include <re_sa.h>
-#include <re_stun.h>
-#include <re_ice.h>
-#include <re_udp.h>
-#include <re_tcp.h>
-#include <re_sys.h>
-#include <re_trice.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_list.h>
+#include <re/re_tmr.h>
+#include <re/re_sa.h>
+#include <re/re_stun.h>
+#include <re/re_ice.h>
+#include <re/re_udp.h>
+#include <re/re_tcp.h>
+#include <re/re_sys.h>
+#include <re/re_trice.h>
 #include "trice.h"
 
 
 #define DEBUG_MODULE "stunsrv"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static const char *sw = "ice stunsrv v" RE_VERSION " (" ARCH "/" OS ")";

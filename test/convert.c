@@ -3,12 +3,12 @@
  *
  * Copyright (C) 2022 Sebastian Reimers
  */
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 #define DEBUG_MODULE "testconvert"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 int test_try_into(void)

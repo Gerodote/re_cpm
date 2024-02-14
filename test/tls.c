@@ -5,13 +5,13 @@
  */
 #include <openssl/ssl.h>
 #include <string.h>
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "tlstest"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 struct tls_test {

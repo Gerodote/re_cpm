@@ -2,16 +2,16 @@
  * @file trace.c RE_TRACE helpers
  * JSON traces (chrome://tracing)
  */
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_trace.h>
-#include <re_fmt.h>
-#include <re_list.h>
-#include <re_tmr.h>
-#include <re_thread.h>
-#include <re_atomic.h>
-#include <re_sys.h>
-#include <re_main.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_trace.h>
+#include <re/re_fmt.h>
+#include <re/re_list.h>
+#include <re/re_tmr.h>
+#include <re/re_thread.h>
+#include <re/re_atomic.h>
+#include <re/re_sys.h>
+#include <re/re_main.h>
 
 #ifdef HAVE_PTHREAD
 #include <pthread.h>
@@ -31,7 +31,7 @@
 
 #define DEBUG_MODULE "trace"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 #ifndef TRACE_BUFFER_SIZE
 #define TRACE_BUFFER_SIZE 100000

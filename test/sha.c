@@ -4,14 +4,14 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re.h>
-#include <re_sha.h>
+#include <re/re.h>
+#include <re/re_sha.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "testsha1"
 #define DEBUG_LEVEL 4
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static const char *test_data[] = {

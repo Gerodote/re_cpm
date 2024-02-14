@@ -5,8 +5,8 @@
  */
 
 #include <math.h>
-#include <re.h>
-#include <rem.h>
+#include <re/re.h>
+#include <re/rem.h>
 
 
 /**

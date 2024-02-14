@@ -3,19 +3,19 @@
  *
  * Copyright (C) 2010 Creytiv.com
  */
-#include <re_types.h>
-#include <re_mem.h>
-#include <re_mbuf.h>
-#include <re_list.h>
-#include <re_tmr.h>
-#include <re_sa.h>
-#include <re_udp.h>
-#include <re_stun.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
+#include <re/re_mbuf.h>
+#include <re/re_list.h>
+#include <re/re_tmr.h>
+#include <re/re_sa.h>
+#include <re/re_udp.h>
+#include <re/re_stun.h>
 
 
 #define DEBUG_MODULE "keepalive"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /** Defines a STUN Keepalive session */

@@ -5,14 +5,14 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <rem.h>
+#include <re/re.h>
+#include <re/rem.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "aactest"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 int test_aac(void)

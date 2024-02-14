@@ -5,8 +5,8 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <rem_vid.h>
+#include <re/re.h>
+#include <re/rem_vid.h>
 
 
 /**

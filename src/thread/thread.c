@@ -1,8 +1,8 @@
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mem.h>
-#include <re_thread.h>
-#include <re_trace.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
+#include <re/re_thread.h>
+#include <re/re_trace.h>
 #ifdef HAVE_PRCTL
 #include <sys/prctl.h>
 #endif

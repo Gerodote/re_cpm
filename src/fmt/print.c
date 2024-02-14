@@ -5,10 +5,10 @@
  */
 #include <string.h>
 #include <math.h>
-#include <re_types.h>
-#include <re_sa.h>
-#include <re_fmt.h>
-#include <re_mem.h>
+#include <re/re_types.h>
+#include <re/re_sa.h>
+#include <re/re_fmt.h>
+#include <re/re_mem.h>
 #ifdef _MSC_VER
 #include <float.h>
 #ifndef isinf
@@ -28,7 +28,7 @@
 
 #define DEBUG_MODULE "print"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 enum length_modifier {
 	LENMOD_NONE      = 0,

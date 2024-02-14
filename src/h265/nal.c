@@ -4,10 +4,10 @@
  * Copyright (C) 2010 - 2022 Alfred E. Heggestad
  */
 
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_mbuf.h>
-#include <re_h265.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_mbuf.h>
+#include <re/re_h265.h>
 
 
 void h265_nal_encode(uint8_t buf[2], unsigned nal_unit_type,

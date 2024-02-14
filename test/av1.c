@@ -5,14 +5,14 @@
  */
 
 #include <string.h>
-#include <re.h>
-#include <re_av1.h>
+#include <re/re.h>
+#include <re/re_av1.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "av1test"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static int test_leb128(void)

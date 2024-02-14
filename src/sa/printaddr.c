@@ -8,9 +8,9 @@
 #include <sys/socket.h>
 #include <net/if.h>
 #endif
-#include <re_types.h>
-#include <re_fmt.h>
-#include <re_sa.h>
+#include <re/re_types.h>
+#include <re/re_fmt.h>
+#include <re/re_sa.h>
 
 
 /**

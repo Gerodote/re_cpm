@@ -4,14 +4,14 @@
  * Copyright (C) 2010 Creytiv.com
  */
 #include <string.h>
-#include <re.h>
-#include <rem.h>
+#include <re/re.h>
+#include <re/rem.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "fir"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 /* 48kHz sample-rate, 8kHz cutoff (pass 0-7kHz, stop 9-24kHz) */

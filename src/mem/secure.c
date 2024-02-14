@@ -5,8 +5,8 @@
  */
 
 #include <string.h>
-#include <re_types.h>
-#include <re_mem.h>
+#include <re/re_types.h>
+#include <re/re_mem.h>
 #if !defined(__GNUC__) && defined(WIN32)
 #if !defined(WIN32_LEAN_AND_MEAN)
 #define WIN32_LEAN_AND_MEAN

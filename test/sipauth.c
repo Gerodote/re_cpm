@@ -1,13 +1,13 @@
 /**
  * @file sipauth.c SIP Auth testcode
  */
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "test_sipauth"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 static int auth_handler(char **user, char **pass, const char *rlm, void *arg)

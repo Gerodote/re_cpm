@@ -4,9 +4,9 @@
  * Copyright (C) 2010 Creytiv.com
  */
 
-#include <re.h>
-#include <rem_goertzel.h>
-#include <rem_dtmf.h>
+#include <re/re.h>
+#include <re/rem_goertzel.h>
+#include <re/rem_dtmf.h>
 
 
 #define BLOCK_SIZE    102         /* At 8kHz sample rate */

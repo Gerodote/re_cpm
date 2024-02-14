@@ -10,13 +10,13 @@
 #ifdef HAVE_GETOPT
 #include <getopt.h>
 #endif
-#include <re.h>
+#include <re/re.h>
 #include "test.h"
 
 
 #define DEBUG_MODULE "retest"
 #define DEBUG_LEVEL 5
-#include <re_dbg.h>
+#include <re/re_dbg.h>
 
 
 #ifdef HAVE_SIGNAL
