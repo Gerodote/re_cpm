@@ -636,8 +636,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 # target_compile_definitions(re-objs PRIVATE ${RE_DEFINITIONS})
 #
 # target_include_directories(re-objs PRIVATE include)
-# target_include_directories(re-objs PRIVATE
-#   ${OPENSSL_INCLUDE_DIR} ${ZLIB_INCLUDE_DIRS})
+target_include_directories(${PROJECT_NAME} PRIVATE
+   ${ZLIB_INCLUDE_DIRS})
 #
 #
 # ##############################################################################
