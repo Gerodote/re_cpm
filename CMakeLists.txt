@@ -11,7 +11,7 @@
 # Versioning
 #
 
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.18)
 
 project(re
   VERSION 3.9.0
@@ -636,6 +636,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 # target_compile_definitions(re-objs PRIVATE ${RE_DEFINITIONS})
 #
 # target_include_directories(re-objs PRIVATE include)
+
 find_package(ZLIB)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -686,8 +687,11 @@ target_link_libraries(${PROJECT_NAME} PRIVATE m)
 #
 
 target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::SSL
-    OpenSSL::Crypto
-    OpenSSL::applink)
+    OpenSSL::Crypto)
+
+if(MSVC) 
+  target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::applink)
+endif()
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE
     "USE_OPENSSL=${USE_OPENSSL}")

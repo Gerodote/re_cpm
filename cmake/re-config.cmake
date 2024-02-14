@@ -13,12 +13,15 @@ find_package(ZLIB)
 if (USE_MBEDTLS)
 find_package(MBEDTLS)
 else()
-CPMAddPackage(
-    NAME openssl-cmake
-    URL https://github.com/jimmy-park/openssl-cmake/archive/main.tar.gz
-    OPTIONS
-    "OPENSSL_CONFIGURE_OPTIONS no-shared\\\\;no-tests" OPENSSL_CONFIGURE_VERBOSE ON
-)
+find_package(OpenSSL)
+  if(NOT ${OpenSSL_FOUND})
+    CPMAddPackage(
+        NAME openssl-cmake
+        URL https://github.com/jimmy-park/openssl-cmake/archive/main.tar.gz
+        OPTIONS
+        "OPENSSL_CONFIGURE_OPTIONS no-shared\\\\;no-tests" OPENSSL_CONFIGURE_VERBOSE ON
+    )
+  endif()
 endif()
 
 if(${USE_MBEDTLS})
