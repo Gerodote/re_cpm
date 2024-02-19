@@ -159,23 +159,37 @@ endif()
 # Main target object
 #
 
-set(LINKLIBS re ${OPENSSL_LIBRARIES})
+set(LINKLIBS re )
+
 if(WIN32)
   list(APPEND LINKLIBS qwave iphlpapi wsock32 ws2_32)
 else()
   list(APPEND LINKLIBS m ${RESOLV_LIBRARY})
 endif()
 
-if(ZLIB_FOUND)
+message(DEBUG "Is zlib found as local: ${ZLIB_FOUND}")
+
+if(${ZLIB_FOUND})
   list(APPEND LINKLIBS ZLIB::ZLIB)
+else()
+  list(APPEND LINKLIBS zlib) # added through CPM
 endif()
 
 add_executable(${PROJECT_NAME} ${SRCS})
 set_property(TARGET ${PROJECT_NAME} PROPERTY ENABLE_EXPORTS 1)
 
+message(DEBUG "LINKLIBS: ${LINKLIBS}")
+message(DEBUG "RE_DEFINITIONS: ${RE_DEFINITIONS}")
 target_link_libraries(${PROJECT_NAME} PRIVATE ${LINKLIBS})
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${RE_DEFINITIONS})
 
-if(USE_OPENSSL)
+if(${USE_OPENSSL} AND ${OPENSSL_FOUND})
   target_include_directories(${PROJECT_NAME} PRIVATE ${OPENSSL_INCLUDE_DIR})
+elseif(${USE_OPENSSL})
+  target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::SSL OpenSSL::Crypto)
+  if(MSVC) 
+    target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::applink)
+  endif()
+
 endif()
+

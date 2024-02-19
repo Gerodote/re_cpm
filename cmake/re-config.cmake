@@ -8,7 +8,16 @@ option(USE_MBEDTLS "Enable MbedTLS" OFF)
 
 find_package(Backtrace)
 find_package(Threads REQUIRED)
-find_package(ZLIB)
+# find_package(ZLIB)
+
+message(DEBUG "zlib found before cpm: ${ZLIB_FOUND}")
+
+if(NOT ${ZLIB_FOUND})
+  CPMAddPackage(NAME ZLIB GIT_REPOSITORY https://github.com/madler/zlib.git
+    GIT_TAG v1.3.1 OPTIONS ZLIB_BUILD_EXAMPLE OFF SKIP_INSTALL_ALL OFF )
+endif()
+
+message(DEBUG "zlib found after cpm: ${ZLIB_FOUND}")
 
 if (USE_MBEDTLS)
 find_package(MBEDTLS)

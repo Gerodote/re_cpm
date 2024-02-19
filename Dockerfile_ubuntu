@@ -1,0 +1,18 @@
+FROM ubuntu:24.04
+
+RUN apt-get update && apt-get upgrade -y
+
+RUN apt-get install cmake make gcc g++ git -y
+
+WORKDIR /home/project
+
+RUN echo "Copy sources of the project"
+COPY . .
+RUN ls -lah
+
+RUN cmake -S . -B ./build -DCMAKE_CXX_FLAGS="-march=native -pipe -flto=auto -ggdb3" --log-level DEBUG -DFETCHCONTENT_QUIET=OFF
+RUN cmake --build ./build -j $(nproc) --verbose
+
+RUN cmake --install ./build --prefix ./install_dir
+
+RUN ls -lah ./install_dir 

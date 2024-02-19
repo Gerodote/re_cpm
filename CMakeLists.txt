@@ -633,17 +633,28 @@ set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 #
 # set_target_properties(re-objs PROPERTIES POSITION_INDEPENDENT_CODE ON)
 #
-# target_compile_definitions(re-objs PRIVATE ${RE_DEFINITIONS})
+# target_compile_definitions(${PROJECT_NAME} PRIVATE ${RE_DEFINITIONS})
 #
 # target_include_directories(re-objs PRIVATE include)
 
-find_package(ZLIB)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
    ${ZLIB_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PRIVATE
-  ZLIB::ZLIB)
+  zlib)
 target_link_libraries(${PROJECT_NAME} PRIVATE m)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::SSL
+    OpenSSL::Crypto)
+
+if(MSVC) 
+  target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::applink)
+endif()
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+    "USE_OPENSSL=${USE_OPENSSL}")
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE ${RE_DEFINITIONS})
 #
 #
 # ##############################################################################
@@ -686,17 +697,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE m)
 # endif()
 #
 
-target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::SSL
-    OpenSSL::Crypto)
-
-if(MSVC) 
-  target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::applink)
-endif()
-
-target_compile_definitions(${PROJECT_NAME} PRIVATE
-    "USE_OPENSSL=${USE_OPENSSL}")
-
-target_compile_definitions(${PROJECT_NAME} PRIVATE ${RE_DEFINITIONS})
 
 ##############################################################################
 #
