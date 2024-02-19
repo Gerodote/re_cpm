@@ -8,7 +8,7 @@ option(USE_MBEDTLS "Enable MbedTLS" OFF)
 
 find_package(Backtrace)
 find_package(Threads REQUIRED)
-# find_package(ZLIB)
+find_package(ZLIB)
 
 message(DEBUG "zlib found before cpm: ${ZLIB_FOUND}")
 
