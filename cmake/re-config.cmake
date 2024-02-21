@@ -12,23 +12,19 @@ find_package(ZLIB)
 
 message(DEBUG "zlib found before cpm: ${ZLIB_FOUND}")
 
-if(NOT ${ZLIB_FOUND})
-  CPMAddPackage(NAME ZLIB GIT_REPOSITORY https://github.com/madler/zlib.git
-    GIT_TAG v1.3.1 OPTIONS ZLIB_BUILD_EXAMPLE OFF SKIP_INSTALL_ALL OFF )
-endif()
 
 message(DEBUG "zlib found after cpm: ${ZLIB_FOUND}")
 
 if (USE_MBEDTLS)
 find_package(MBEDTLS)
 else()
-find_package(OpenSSL)
+find_package(OpenSSL 3.2.1)
   if(NOT ${OpenSSL_FOUND})
     CPMAddPackage(
         NAME openssl-cmake
         URL https://github.com/jimmy-park/openssl-cmake/archive/main.tar.gz
         OPTIONS
-        "OPENSSL_CONFIGURE_OPTIONS no-shared\\\\;no-tests" OPENSSL_CONFIGURE_VERBOSE ON
+        "OPENSSL_CONFIGURE_OPTIONS no-shared\\\\;no-tests" "OPENSSL_CONFIGURE_VERBOSE ON" "OPENSSL_TARGET_VERSION 3.1.1"
     )
   endif()
 endif()

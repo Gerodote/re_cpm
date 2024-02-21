@@ -171,7 +171,7 @@ message(DEBUG "Is zlib found as local: ${ZLIB_FOUND}")
 
 if(${ZLIB_FOUND})
   list(APPEND LINKLIBS ZLIB::ZLIB)
-else()
+elseif(${ZLIB_CPM})
   list(APPEND LINKLIBS zlib) # added through CPM
 endif()
 

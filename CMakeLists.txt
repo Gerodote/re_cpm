@@ -637,11 +637,12 @@ set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 #
 # target_include_directories(re-objs PRIVATE include)
 
-
+if(${ZLIB_FOUND})
 target_include_directories(${PROJECT_NAME} PRIVATE
    ${ZLIB_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PRIVATE
-  zlib)
+  ZLIB)
+endif()
 target_link_libraries(${PROJECT_NAME} PRIVATE m)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::SSL

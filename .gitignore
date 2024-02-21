@@ -28,3 +28,6 @@ compile_commands.json
 
 # Visual studio config
 mk/win32/*.vcxproj.user
+/.vs
+/out/build/x64-Debug
+/CMakeSettings.json
